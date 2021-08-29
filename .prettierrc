@@ -1,0 +1,50 @@
+{
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "parser": "babel",
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "singleQuote": false,
+        "jsxSingleQuote": true,
+        "arrowParens": "avoid"
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "parser": "scss"
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "printWidth": 120,
+        "parser": "html",
+        "proseWrap": "preserve"
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
+      "files": "*.graphql",
+      "options": {
+        "parser": "graphql"
+      }
+    },
+  ]
+}

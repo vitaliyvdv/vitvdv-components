@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    "babel-plugin-macros",
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true,
+        "minify": true,
+        "transpileTemplateLiterals": true,
+        "displayName": true,
+        "fileName": false,
+        "pure": true
+      }
+    ]
+  ]
+}
