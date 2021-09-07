@@ -1,6 +1,6 @@
 import React from "react"
 
-import Preloader from "components/common/preloader"
+import Preloader from "src/components/common/preloader"
 
 export default {
   title: "Common/Preloader",

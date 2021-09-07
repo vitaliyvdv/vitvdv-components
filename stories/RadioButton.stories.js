@@ -1,6 +1,6 @@
 import React from "react"
 
-import { RadioButton } from "components/common/inputs"
+import { RadioButton } from "src/components/common/inputs"
 
 export default {
   title: "Inputs/RadioButton",

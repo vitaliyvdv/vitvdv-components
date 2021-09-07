@@ -1,7 +1,7 @@
 import React from "react"
 import { action } from "@storybook/addon-actions"
 
-import { CheckboxList, Checkbox } from "components/common/inputs"
+import { CheckboxList, Checkbox } from "src/components/common/inputs"
 
 export default {
   title: "Inputs/CheckboxList",

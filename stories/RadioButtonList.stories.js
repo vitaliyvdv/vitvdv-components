@@ -1,7 +1,7 @@
 import React from "react"
 import { action } from "@storybook/addon-actions"
 
-import { RadioButtonList, RadioButton } from "components/common/inputs"
+import { RadioButtonList, RadioButton } from "src/components/common/inputs"
 
 export default {
   title: "Inputs/RadioButtonList",

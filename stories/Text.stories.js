@@ -1,6 +1,6 @@
 import React from "react"
 
-import Text from "components/common/text"
+import Text from "src/components/common/text"
 
 export default {
   title: "Common/Text",

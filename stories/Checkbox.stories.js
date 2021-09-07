@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Checkbox } from "components/common/inputs"
+import { Checkbox } from "src/components/common/inputs"
 
 export default {
   title: "Inputs/Checkbox",

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 
-import { Dialog, DialogActions, DialogContent, DialogTitle } from "components/common/dialog"
-import { Button } from "components/common/inputs"
+import { Dialog, DialogActions, DialogContent, DialogTitle } from "src/components/common/dialog"
+import { Button } from "src/components/common/inputs"
 
 export default {
   title: "Common/Dialog",
