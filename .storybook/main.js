@@ -6,27 +6,27 @@ module.exports = {
   webpackFinal: async (config, { configType, webpackFinal }) => {
     config.resolve.modules = [...(config.resolve.modules || []), path.resolve("./")]
 
-    const fileLoaderRule = config.module.rules.find(rule => rule.test.test(".svg"))
-    fileLoaderRule.exclude = /\.svg$/
+    // const fileLoaderRule = config.module.rules.find(rule => rule.test.test(".svg"))
+    // fileLoaderRule.exclude = /\.svg$/
     config.module.rules.push(
-      {
-        test: /\.svg$/,
-        issuer: {
-          test: /\.(js|ts)x?$/
-        },
-        use: [
-          {
-            loader: "@svgr/webpack",
-            options: {
-              svgoConfig: {
-                plugins: {
-                  removeViewBox: false
-                }
-              }
-            }
-          }
-        ]
-      },
+      // {
+      //   test: /\.svg$/,
+      //   issuer: {
+      //     test: /\.(js|ts)x?$/
+      //   },
+      //   use: [
+      //     {
+      //       loader: "@svgr/webpack",
+      //       options: {
+      //         svgoConfig: {
+      //           plugins: {
+      //             removeViewBox: false
+      //           }
+      //         }
+      //       }
+      //     }
+      //   ]
+      // },
       {
         test: /\.scss$/i,
         use: [
