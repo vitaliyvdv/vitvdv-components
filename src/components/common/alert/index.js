@@ -83,9 +83,7 @@ const Alert = ({ severity, variant, title, text, ...rest }) => {
     <div role='alert' {...rest}>
       <StyledAlert severity={severity} variant={variant}>
         <StyledAlertWrapper>
-          <StyledAlertIcon variant={variant} severity={severity}>
-            {IconSet()}
-          </StyledAlertIcon>
+          {/* <StyledAlertIcon variant={variant} severity={severity} icon={IconSet()}></StyledAlertIcon> */}
           <div>
             {title && <StyledAlertTitle>{title}</StyledAlertTitle>}
             {text && <StyledAlertText size='sm'>{text}</StyledAlertText>}

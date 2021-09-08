@@ -5,7 +5,7 @@ import Text from "src/components/common/text"
 import Icon from "src/components/common/icon"
 import AppTooltip from "src/components/common/tooltip"
 
-import { ReactComponent as TooltioInfoIcon } from "src/images/svg/tooltip/info.svg"
+import TooltipInfoIcon from "src/images/svg/tooltip/info.svg"
 
 const StyledLabel = styled(Text)(() => [tw`inline-block font-semibold cursor-default select-none`])
 
@@ -27,9 +27,7 @@ const Label = ({ label, disabled, htmlFor, onClick, tooltip, children, size, ...
 
       {tooltip && (
         <StyledLabelTooltip content={tooltip}>
-          <StyledLabeTooltiplIcon size={size}>
-            <TooltioInfoIcon />
-          </StyledLabeTooltiplIcon>
+          <StyledLabeTooltiplIcon size={size} icon={TooltipInfoIcon} />
         </StyledLabelTooltip>
       )}
 

@@ -28,6 +28,14 @@ module.exports = {
       //   ]
       // },
       {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: "url-loader"
+          }
+        ]
+      },
+      {
         test: /\.scss$/i,
         use: [
           "style-loader",
