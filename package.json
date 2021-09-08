@@ -1,5 +1,5 @@
 {
-  "name": "krea-components",
+  "name": "vdv-components",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.1.10",
     "framer-motion": "^4.1.17",
     "lodash": "^4.17.21",
+    "np": "^7.5.0",
     "onchange": "^7.1.0",
     "path": "^0.12.7",
     "postcss": "^8.3.6",
@@ -30,7 +31,8 @@
     "prettier": "prettier --config .prettierrc --config-precedence prefer-file --write './**/*.{js,jsx,css,scss,json}'",
     "prettier-watch": "onchange -d 1000 './**/*.{js,jsx,css,scss,json}' -- prettier --config .prettierrc --config-precedence prefer-file --write {{changed}}",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "npm publish": "np"
   },
   "eslintConfig": {
     "extends": ["react-app", "react-app/jest"]
