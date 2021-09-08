@@ -92,11 +92,7 @@ const FormFieldWrapper = ({
         >
           {!textarea ? (
             <Fragment>
-              {startIcon && (
-                <StyledStartIcon size={size} error={error} onClick={inputFocus}>
-                  {startIcon}
-                </StyledStartIcon>
-              )}
+              {startIcon && <StyledStartIcon size={size} error={error} onClick={inputFocus} icon={startIcon} />}
 
               {textPrepend && (
                 <StyledTextPrepend size={size} error={error} onClick={inputFocus}>
@@ -118,11 +114,7 @@ const FormFieldWrapper = ({
                 </StyledTextAppend>
               )}
 
-              {endIcon && (
-                <StyledEndIcon size={size} error={error} onClick={inputFocus}>
-                  {endIcon}
-                </StyledEndIcon>
-              )}
+              {endIcon && <StyledEndIcon size={size} error={error} onClick={inputFocus} icon={endIcon} />}
             </Fragment>
           ) : (
             <Fragment>{inputField}</Fragment>
