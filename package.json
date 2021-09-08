@@ -26,7 +26,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "echo \"No test specified\"",
     "eject": "react-scripts eject",
     "prettier": "prettier --config .prettierrc --config-precedence prefer-file --write './**/*.{js,jsx,css,scss,json}'",
     "prettier-watch": "onchange -d 1000 './**/*.{js,jsx,css,scss,json}' -- prettier --config .prettierrc --config-precedence prefer-file --write {{changed}}",
