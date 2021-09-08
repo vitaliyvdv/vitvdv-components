@@ -1,13 +1,24 @@
 import React, { forwardRef } from "react"
 import PropTypes from "prop-types"
+import SVG from "react-inlinesvg"
 
+import Icon from "src/components/common/icon"
 import Button from "./Button"
 
-const IconButton = forwardRef(({ color, variant, size, children, href, disabled, ...rest }, ref) => {
+const IconButton = forwardRef(({ color, variant, size, href, disabled, startIcon, endIcon, ...rest }, ref) => {
   return (
-    <Button onlyIcon size={size} color={color} variant={variant} href={href} ref={ref} disabled={disabled} {...rest}>
-      {children}
-    </Button>
+    <Button
+      onlyIcon
+      size={size}
+      color={color}
+      variant={variant}
+      href={href}
+      ref={ref}
+      disabled={disabled}
+      startIcon={startIcon}
+      endIcon={endIcon}
+      {...rest}
+    />
   )
 })
 

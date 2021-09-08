@@ -129,25 +129,22 @@ const Button = forwardRef(
   ({ children, preloader, startIcon, endIcon, size, color, variant, disabled, onlyIcon, ...rest }, ref) => {
     const component = (
       <Fragment>
-        {startIcon && (
-          <StyledStartIcon size={size} preloader={preloader}>
-            {startIcon}
-          </StyledStartIcon>
-        )}
+        {startIcon && <StyledStartIcon size={size} preloader={preloader} icon={startIcon} />}
 
         <StyledButtonValue size={size} preloader={preloader}>
           {children}
         </StyledButtonValue>
 
-        {endIcon && (
-          <StyledEndIcon size={size} preloader={preloader}>
-            {endIcon}
-          </StyledEndIcon>
-        )}
+        {endIcon && <StyledEndIcon size={size} preloader={preloader} icon={endIcon} />}
       </Fragment>
     )
 
-    const icon = <Icon size={size}>{children}</Icon>
+    const icon = (
+      <>
+        {startIcon && <Icon size={size} icon={startIcon} />}
+        {endIcon && <Icon size={size} icon={endIcon} />}
+      </>
+    )
 
     return (
       <StyledButton

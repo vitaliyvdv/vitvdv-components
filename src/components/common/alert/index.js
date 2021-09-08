@@ -1,15 +1,14 @@
 import PropTypes from "prop-types"
-import loadable from "@loadable/component"
 
 import Text from "src/components/common/text"
 import Icon from "src/components/common/icon"
 
 import tw, { styled, css } from "twin.macro"
 
-const ErrorIcon = loadable(() => import("src/images/svg/alert/error.svg"))
-const WarningIcon = loadable(() => import("src/images/svg/alert/warning.svg"))
-const InfoIcon = loadable(() => import("src/images/svg/alert/info.svg"))
-const SuccessIcon = loadable(() => import("src/images/svg/alert/success.svg"))
+import ErrorIcon from "src/images/svg/alert/error.svg"
+import WarningIcon from "src/images/svg/alert/warning.svg"
+import InfoIcon from "src/images/svg/alert/info.svg"
+import SuccessIcon from "src/images/svg/alert/success.svg"
 
 const StyledAlertOutlined = ({ severity }) => css`
   ${tw`border border-2 bg-transparent text-black`}
@@ -61,29 +60,32 @@ const StyledAlertText = styled(Text)(({}) => [tw`leading-snug`])
 
 const Alert = ({ severity, variant, title, text, ...rest }) => {
   const IconSet = () => {
+    let icon
     switch (true) {
       case severity === "error":
-        return <ErrorIcon />
+        icon = ErrorIcon
         break
       case severity === "warning":
-        return <WarningIcon />
+        icon = WarningIcon
         break
       case severity === "info":
-        return <InfoIcon />
+        icon = InfoIcon
         break
       case severity === "success":
-        return <SuccessIcon />
+        icon = SuccessIcon
         break
       default:
-        return <InfoIcon />
+        icon = InfoIcon
     }
+
+    return icon
   }
 
   return (
     <div role='alert' {...rest}>
       <StyledAlert severity={severity} variant={variant}>
         <StyledAlertWrapper>
-          {/* <StyledAlertIcon variant={variant} severity={severity} icon={IconSet()}></StyledAlertIcon> */}
+          <StyledAlertIcon variant={variant} severity={severity} icon={IconSet()} />
           <div>
             {title && <StyledAlertTitle>{title}</StyledAlertTitle>}
             {text && <StyledAlertText size='sm'>{text}</StyledAlertText>}
