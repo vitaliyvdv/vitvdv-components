@@ -6,25 +6,23 @@ module.exports = {
   webpackFinal: async (config, { configType, webpackFinal }) => {
     config.resolve.modules = [...(config.resolve.modules || []), path.resolve("./")]
 
-    config.module.rules.push(
-      {
-        test: /\.scss$/i,
-        use: [
-          "style-loader",
-          "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                config: path.resolve(__dirname, "../postcss.config.js"),
-                implementation: require("postcss")
-              }
+    config.module.rules.push({
+      test: /\.scss$/i,
+      use: [
+        "style-loader",
+        "css-loader",
+        {
+          loader: "postcss-loader",
+          options: {
+            postcssOptions: {
+              config: path.resolve(__dirname, "../postcss.config.js"),
+              implementation: require("postcss")
             }
-          },
-          "sass-loader"
-        ]
-      }
-    )
+          }
+        },
+        "sass-loader"
+      ]
+    })
 
     return config
   }

@@ -12,6 +12,5 @@ const Template = args => <Alert {...args} />
 export const Default = Template.bind({})
 Default.args = {
   title: "Lorem ipsum",
-  text:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 }
