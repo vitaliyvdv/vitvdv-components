@@ -1,9 +1,9 @@
 {
-  "name": "vdv-components",
+  "name": "vitvdv-components",
   "version": "0.1.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vitaliyvdv/krea-components.git"
+    "url": "https://github.com/vitaliyvdv/vitvdv-components.git"
   },
   "dependencies": {
     "@loadable/component": "^5.15.0",
