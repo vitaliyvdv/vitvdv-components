@@ -60,7 +60,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --pattern \"**/*.*(js|jsx|css|scss)\" --staged"
+      "pre-commit": "pretty-quick --staged"
     }
   },
   "browserslist": {
