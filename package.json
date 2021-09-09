@@ -1,7 +1,10 @@
 {
   "name": "vdv-components",
   "version": "0.1.1",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitaliyvdv/krea-components.git"
+  },
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "@svgr/webpack": "^5.5.0",
@@ -32,7 +35,7 @@
     "prettier-watch": "onchange -d 1000 './**/*.{js,jsx,css,scss,json}' -- prettier --config .prettierrc --config-precedence prefer-file --write {{changed}}",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "npm-publish": "np"
+    "npm-publish": "np --no-tests"
   },
   "eslintConfig": {
     "extends": [
