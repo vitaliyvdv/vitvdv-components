@@ -1,59 +1,24 @@
 {
   "name": "vitvdv-components",
   "version": "0.1.2",
+  "author": "",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/vitaliyvdv/vitvdv-components.git"
   },
   "dependencies": {
     "@loadable/component": "^5.15.0",
-    "@svgr/webpack": "^5.5.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "framer-motion": "^4.1.17",
     "lodash": "^4.17.21",
-    "np": "^7.5.0",
-    "onchange": "^7.1.0",
     "path": "^0.12.7",
-    "postcss": "^8.3.6",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "react-inlinesvg": "^2.3.0",
     "react-intersection-observer": "^8.32.1",
     "react-scripts": "4.0.3",
     "react-tooltip-lite": "^1.12.0",
     "styled-components": "^5.3.1",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "echo \"No test specified\"",
-    "eject": "react-scripts eject",
-    "prettier": "prettier --config .prettierrc --config-precedence prefer-file --write './**/*.{js,jsx,css,scss,json}'",
-    "prettier-watch": "onchange -d 1000 './**/*.{js,jsx,css,scss,json}' -- prettier --config .prettierrc --config-precedence prefer-file --write {{changed}}",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "npm-publish": "np --no-tests"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "tailwindcss": "^2.2.14",
+    "twin.macro": "^2.7.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^6.3.7",
@@ -66,8 +31,13 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.2",
+    "np": "^7.5.0",
+    "onchange": "^7.1.0",
+    "postcss": "^8.3.6",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "storybook": "^6.3.7",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
@@ -75,9 +45,35 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-prettier": "^1.2.0",
-    "stylelint-processor-styled-components": "^1.10.0",
-    "tailwindcss": "^2.2.8",
-    "twin.macro": "^2.7.0"
+    "stylelint-processor-styled-components": "^1.10.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"No test specified\"",
+    "eject": "react-scripts eject",
+    "prettier": "prettier --config .prettierrc --config-precedence prefer-file --write './**/*.{js,jsx,css,scss,json}'",
+    "prettier-watch": "onchange -d 1000 './**/*.{js,jsx,css,scss,json}' -- prettier --config .prettierrc --config-precedence prefer-file --write {{changed}}",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "npm-publish": "np --no-tests --no-2fa"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --pattern \"**/*.*(js|jsx|css|scss)\" --staged"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "babelMacros": {
     "twin": {
