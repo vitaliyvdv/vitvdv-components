@@ -9,24 +9,20 @@
   },
   "dependencies": {
     "@loadable/component": "^5.15.0",
-    "babel-plugin-macros": "^3.1.0",
-    "babel-plugin-styled-components": "^1.13.2",
     "framer-motion": "^4.1.17",
     "lodash": "^4.17.21",
     "path": "^0.12.7",
     "react-inlinesvg": "^2.3.0",
     "react-intersection-observer": "^8.32.1",
-    "react-scripts": "4.0.3",
-    "react-tooltip-lite": "^1.12.0",
-    "styled-components": "^5.3.1",
-    "tailwindcss": "^2.2.14",
-    "twin.macro": "^2.7.0"
+    "react-tooltip-lite": "^1.12.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^6.3.7",
     "@storybook/addon-essentials": "^6.3.7",
     "@storybook/addon-links": "^6.3.7",
     "@storybook/react": "^6.3.7",
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-styled-components": "^1.13.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -38,14 +34,25 @@
     "pretty-quick": "^3.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3",
     "storybook": "^6.3.7",
+    "styled-components": "^5.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended": "^5.0.0",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-prettier": "^1.2.0",
-    "stylelint-processor-styled-components": "^1.10.0"
+    "stylelint-processor-styled-components": "^1.10.0",
+    "tailwindcss": "^2.2.14",
+    "twin.macro": "^2.7.0"
+  },
+  "peerDependencies": {
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-styled-components": "^1.13.2",
+    "styled-components": "^5.3.1",
+    "tailwindcss": "^2.2.14",
+    "twin.macro": "^2.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -64,16 +71,8 @@
     }
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   },
   "babelMacros": {
     "twin": {
