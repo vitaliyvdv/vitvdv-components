@@ -3,6 +3,7 @@
   "version": "0.1.5",
   "author": "",
   "license": "ISC",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/vitaliyvdv/vitvdv-components.git"
