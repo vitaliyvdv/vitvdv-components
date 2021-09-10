@@ -74,7 +74,7 @@
     "prettier-watch": "onchange -d 1000 './**/*.{js,jsx,css,scss,json}' -- prettier --config .prettierrc --config-precedence prefer-file --write {{changed}}",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "np-run": "np --no-tests --no-2fa --contents dist",
+    "np-run": "np --no-tests --no-2fa",
     "npm-publish": "yarn build && yarn np-run"
   },
   "husky": {
