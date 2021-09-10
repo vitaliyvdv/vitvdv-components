@@ -9,7 +9,7 @@
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": ["dist", "README.md"],
+  "files": ["dist", "README.md", "package.json"],
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "framer-motion": "^4.1.17",
