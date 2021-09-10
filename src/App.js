@@ -1,4 +1,4 @@
-import Preloader from "src/components/common/preloader"
+import { Preloader } from "src/components"
 
 function App() {
   return (
