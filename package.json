@@ -69,7 +69,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "np-run": "np --no-tests --no-2fa --contents dist",
-    "npm-publish": "build && np-run"
+    "npm-publish": "yarn build && yarn np-run"
   },
   "husky": {
     "hooks": {
