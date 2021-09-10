@@ -67,7 +67,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore 'src/App.js,src/index.js'",
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files && rm dist/index.js dist/App.js ",
     "test": "echo \"No test specified\"",
     "eject": "react-scripts eject",
     "prettier": "prettier --config .prettierrc --config-precedence prefer-file --write './**/*.{js,jsx,css,scss,json}'",
