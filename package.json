@@ -7,6 +7,7 @@
     "type": "git",
     "url": "https://github.com/vitaliyvdv/vitvdv-components.git"
   },
+  "files": [ "dist", "README.md" ],
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "framer-motion": "^4.1.17",
@@ -16,6 +17,8 @@
     "react-tooltip-lite": "^1.12.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
     "@storybook/addon-actions": "^6.3.7",
     "@storybook/addon-essentials": "^6.3.7",
     "@storybook/addon-links": "^6.3.7",
@@ -58,14 +61,14 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf dist && NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "echo \"No test specified\"",
     "eject": "react-scripts eject",
     "prettier": "prettier --config .prettierrc --config-precedence prefer-file --write './**/*.{js,jsx,css,scss,json}'",
     "prettier-watch": "onchange -d 1000 './**/*.{js,jsx,css,scss,json}' -- prettier --config .prettierrc --config-precedence prefer-file --write {{changed}}",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "npm-publish": "np --no-tests --no-2fa"
+    "npm-publish": "np --no-tests --no-2fa --contents dist"
   },
   "husky": {
     "hooks": {
