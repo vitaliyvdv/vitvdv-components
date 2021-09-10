@@ -12,7 +12,8 @@
   "files": [
     "dist",
     "README.md",
-    "jsconfig.json"
+    "jsconfig.json",
+    "tailwind.config.js"
   ],
   "dependencies": {
     "@loadable/component": "^5.15.0",
