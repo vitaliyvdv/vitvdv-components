@@ -1,10 +1,9 @@
+import React from "react"
 import PropTypes from "prop-types"
 import loadable from "@loadable/component"
 
 import tw, { styled } from "twin.macro"
 import { createGlobalStyle } from "styled-components"
-
-// import Tooltip from "react-tooltip-lite"
 
 const Tooltip = loadable(() => import("react-tooltip-lite"))
 

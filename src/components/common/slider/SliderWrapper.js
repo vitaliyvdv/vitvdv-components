@@ -1,3 +1,5 @@
+import React from "react"
+
 const SliderWrapper = ({ children, ...rest }) => {
   return (
     <div className='swiper-wrapper' {...rest}>

@@ -1,3 +1,4 @@
+import React from "react"
 import tw, { styled } from "twin.macro"
 
 const StyledDialogActions = styled.div(({}) => [tw`flex-grow-0 flex-shrink-0 px-6 pb-4`])

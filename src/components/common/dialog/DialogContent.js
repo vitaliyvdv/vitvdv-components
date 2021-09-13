@@ -1,3 +1,4 @@
+import React from "react"
 import tw, { styled } from "twin.macro"
 
 const StyledDialogContent = styled.div(({}) => [tw`flex-grow flex-shrink overflow-auto`])
