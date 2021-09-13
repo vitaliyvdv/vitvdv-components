@@ -9,12 +9,7 @@
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": [
-    "dist",
-    "README.md",
-    "jsconfig.json",
-    "tailwind.config.js"
-  ],
+  "files": ["dist", "README.md", "jsconfig.json", "tailwind.config.js"],
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "framer-motion": "^4.1.17",
@@ -31,6 +26,7 @@
     "@storybook/addon-links": "^6.3.7",
     "@storybook/react": "^6.3.7",
     "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-styled-components": "^1.13.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
@@ -75,6 +71,7 @@
     "prettier-watch": "onchange -d 1000 './**/*.{js,jsx,css,scss,json}' -- prettier --config .prettierrc --config-precedence prefer-file --write {{changed}}",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "storybook-static": "npx http-server ./storybook-static",
     "np-run": "np --no-tests --no-2fa",
     "npm-publish": "yarn build && yarn np-run"
   },
@@ -84,16 +81,8 @@
     }
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   },
   "babelMacros": {
     "twin": {

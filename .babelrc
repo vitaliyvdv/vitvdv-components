@@ -1,5 +1,6 @@
 {
   "plugins": [
+
     "babel-plugin-macros",
     [
       "babel-plugin-styled-components",
@@ -18,5 +19,32 @@
       "react-app",
       { "absoluteRuntime": false }
     ]
-  ]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        [
+          "babel-plugin-module-resolver",
+          {
+            "alias": {
+              "src": "./src/"
+            },
+            "root": ["./"]
+          }
+        ]
+      ]
+    },
+    "production": {
+      "plugins": [
+        [
+          "babel-plugin-module-resolver",
+          {
+            "root": ["./"],
+            "alias": {
+            }
+          }
+        ]
+      ]
+    }
+  }
 }
