@@ -76,8 +76,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      base: ["Graphik", "sans-serif"],
-      body: ["Merriweather", "serif"]
+      base: ["Roobert", "Arial", "sans-serif"],
+      body: ["Roobert", "Arial", "sans-serif"]
     },
     fontSize: {
       0: 0,

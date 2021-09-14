@@ -1,8 +1,10 @@
-import { Container, Preloader, Text } from "src/components"
+import { Container, Preloader, Text, Button } from "src/components"
+import { AppGlobalStyles } from "src/styles"
 
 function App() {
   return (
     <Container>
+      <AppGlobalStyles />
       <Preloader size='xl' />
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, erat a consequat posuere, lectus velit
@@ -13,6 +15,7 @@ function App() {
         tristique senectus et netus et malesuada fames ac turpis egestas. Nam facilisis lorem nec urna venenatis
         vehicula. Nunc nec enim nisi. Curabitur vehicula purus libero, eu commodo ante euismod sit amet.
       </Text>
+      <Button>Test Button</Button>
     </Container>
   )
 }
