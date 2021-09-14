@@ -4,7 +4,7 @@ import tw, { styled } from "twin.macro"
 
 import Icon from "src/components/common/icon"
 
-import PreloaderSVG from "src/images/svg/preloader.svg"
+import PreloaderSVG from "src/static/images/svg/preloader.svg"
 
 const StyledPreloader = styled.div(({}) => [tw`flex justify-center items-center`])
 

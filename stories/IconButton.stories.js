@@ -2,7 +2,7 @@ import React from "react"
 
 import { IconButton } from "src/components/common/inputs"
 
-import PreloaderSVG from "src/images/svg/preloader.svg"
+import PreloaderSVG from "src/static/images/svg/preloader.svg"
 
 export default {
   title: "Inputs/IconButton",

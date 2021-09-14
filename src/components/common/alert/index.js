@@ -6,10 +6,10 @@ import Icon from "src/components/common/icon"
 
 import tw, { styled, css } from "twin.macro"
 
-import ErrorIcon from "src/images/svg/alert/error.svg"
-import WarningIcon from "src/images/svg/alert/warning.svg"
-import InfoIcon from "src/images/svg/alert/info.svg"
-import SuccessIcon from "src/images/svg/alert/success.svg"
+import ErrorIcon from "src/static/images/svg/alert/error.svg"
+import WarningIcon from "src/static/images/svg/alert/warning.svg"
+import InfoIcon from "src/static/images/svg/alert/info.svg"
+import SuccessIcon from "src/static/images/svg/alert/success.svg"
 
 const StyledAlertOutlined = ({ severity }) => css`
   ${tw`border border-2 bg-transparent text-black`}

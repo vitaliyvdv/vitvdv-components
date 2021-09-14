@@ -6,7 +6,7 @@ import Text from "src/components/common/text"
 import Icon from "src/components/common/icon"
 import AppTooltip from "src/components/common/tooltip"
 
-import TooltipInfoIcon from "src/images/svg/tooltip/info.svg"
+import TooltipInfoIcon from "src/static/images/svg/tooltip/info.svg"
 
 const StyledLabel = styled(Text)(() => [tw`inline-block font-semibold cursor-default select-none`])
 
