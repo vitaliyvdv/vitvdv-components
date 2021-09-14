@@ -1,4 +1,4 @@
-import { Container, Preloader, Text, Button } from "src/components"
+import { Container, Preloader, Text, Button, AppTooltip } from "src/components"
 import { AppGlobalStyles } from "src/styles"
 
 function App() {
@@ -15,7 +15,9 @@ function App() {
         tristique senectus et netus et malesuada fames ac turpis egestas. Nam facilisis lorem nec urna venenatis
         vehicula. Nunc nec enim nisi. Curabitur vehicula purus libero, eu commodo ante euismod sit amet.
       </Text>
-      <Button>Test Button</Button>
+      <AppTooltip content='lorem ipsum'>
+        <Button>Test Button</Button>
+      </AppTooltip>
     </Container>
   )
 }
