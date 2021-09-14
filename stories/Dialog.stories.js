@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 
-import { Dialog, DialogActions, DialogContent, DialogTitle } from "src/components/common/dialog"
-import { Button } from "src/components/common/inputs"
+import { AppGlobalStyles } from "src/styles"
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from "src/components"
 
 export default {
   title: "Common/Dialog",
@@ -11,6 +11,7 @@ export default {
 
 const Template = args => (
   <Fragment>
+    <AppGlobalStyles />
     <Button>Open</Button>
     <Dialog {...args}>
       <DialogTitle title='Lorem ipsum' />

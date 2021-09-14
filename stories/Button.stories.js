@@ -1,6 +1,7 @@
 import React from "react"
 
-import { Button } from "src/components/common/inputs"
+import { Button } from "src/components"
+import { AppGlobalStyles } from "src/styles"
 
 import PreloaderSVG from "src/static/images/svg/preloader.svg"
 
@@ -9,7 +10,12 @@ export default {
   component: Button
 }
 
-const Template = args => <Button {...args} />
+const Template = args => (
+  <>
+    <AppGlobalStyles />
+    <Button {...args} />
+  </>
+)
 
 export const Primary = Template.bind({})
 Primary.args = {

@@ -1,6 +1,7 @@
 import React from "react"
 
-import { Select } from "src/components/common/inputs"
+import { AppGlobalStyles } from "src/styles"
+import { Select } from "src/components"
 
 import PreloaderSVG from "src/static/images/svg/preloader.svg"
 
@@ -10,11 +11,14 @@ export default {
 }
 
 const Template = args => (
-  <Select {...args}>
-    <option value='1'>1</option>
-    <option value='2'>2</option>
-    <option value='3'>3</option>
-  </Select>
+  <>
+    <AppGlobalStyles />
+    <Select {...args}>
+      <option value='1'>1</option>
+      <option value='2'>2</option>
+      <option value='3'>3</option>
+    </Select>
+  </>
 )
 
 export const Default = Template.bind({})

@@ -1,13 +1,19 @@
 import React from "react"
 
-import Alert from "src/components/common/alert"
+import { Alert } from "src/components"
+import { AppGlobalStyles } from "src/styles"
 
 export default {
   title: "Common/Alert",
   component: Alert
 }
 
-const Template = args => <Alert {...args} />
+const Template = args => (
+  <>
+    <AppGlobalStyles />
+    <Alert {...args} />
+  </>
+)
 
 export const Default = Template.bind({})
 Default.args = {

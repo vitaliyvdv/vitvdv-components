@@ -1,13 +1,19 @@
 import React from "react"
 
-import Preloader from "src/components/common/preloader"
+import { AppGlobalStyles } from "src/styles"
+import { Preloader } from "src/components"
 
 export default {
   title: "Common/Preloader",
   component: Preloader
 }
 
-const Template = args => <Preloader {...args} />
+const Template = args => (
+  <>
+    <AppGlobalStyles />
+    <Preloader {...args} />
+  </>
+)
 
 export const Default = Template.bind({})
 Default.args = {}

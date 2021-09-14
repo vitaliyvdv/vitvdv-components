@@ -1,13 +1,19 @@
 import React from "react"
 
-import { RadioButton } from "src/components/common/inputs"
+import { AppGlobalStyles } from "src/styles"
+import { RadioButton } from "src/components"
 
 export default {
   title: "Inputs/RadioButton",
   component: RadioButton
 }
 
-const Template = args => <RadioButton {...args} />
+const Template = args => (
+  <>
+    <AppGlobalStyles />
+    <RadioButton {...args} />
+  </>
+)
 
 export const Default = Template.bind({})
 Default.args = {

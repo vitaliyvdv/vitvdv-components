@@ -1,13 +1,19 @@
 import React from "react"
 
-import { Checkbox } from "src/components/common/inputs"
+import { AppGlobalStyles } from "src/styles"
+import { Checkbox } from "src/components"
 
 export default {
   title: "Inputs/Checkbox",
   component: Checkbox
 }
 
-const Template = args => <Checkbox {...args} />
+const Template = args => (
+  <>
+    <AppGlobalStyles />
+    <Checkbox {...args} />
+  </>
+)
 
 export const Default = Template.bind({})
 Default.args = {

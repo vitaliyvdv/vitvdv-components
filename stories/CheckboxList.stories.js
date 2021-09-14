@@ -1,7 +1,8 @@
 import React from "react"
 import { action } from "@storybook/addon-actions"
 
-import { CheckboxList, Checkbox } from "src/components/common/inputs"
+import { AppGlobalStyles } from "src/styles"
+import { CheckboxList, Checkbox } from "src/components"
 
 export default {
   title: "Inputs/CheckboxList",
@@ -15,11 +16,14 @@ const radioValues = {
 }
 
 const Template = args => (
-  <CheckboxList onChange={action("selected")} {...args}>
-    {Object.entries(radioValues).map((item, i) => (
-      <Checkbox key={i} label={item[0]} value={item[1]} className='mr-3' />
-    ))}
-  </CheckboxList>
+  <>
+    <AppGlobalStyles />
+    <CheckboxList onChange={action("selected")} {...args}>
+      {Object.entries(radioValues).map((item, i) => (
+        <Checkbox key={i} label={item[0]} value={item[1]} className='mr-3' />
+      ))}
+    </CheckboxList>
+  </>
 )
 
 export const Default = Template.bind({})

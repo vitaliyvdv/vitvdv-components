@@ -1,7 +1,8 @@
 import React from "react"
 import { action } from "@storybook/addon-actions"
 
-import { RadioButtonList, RadioButton } from "src/components/common/inputs"
+import { AppGlobalStyles } from "src/styles"
+import { RadioButtonList, RadioButton } from "src/components"
 
 export default {
   title: "Inputs/RadioButtonList",
@@ -15,11 +16,14 @@ const radioValues = {
 }
 
 const Template = args => (
-  <RadioButtonList onChange={action("selected")} {...args}>
-    {Object.entries(radioValues).map((item, i) => (
-      <RadioButton key={i} label={item[0]} value={item[1]} className='mr-3' />
-    ))}
-  </RadioButtonList>
+  <>
+    <AppGlobalStyles />
+    <RadioButtonList onChange={action("selected")} {...args}>
+      {Object.entries(radioValues).map((item, i) => (
+        <RadioButton key={i} label={item[0]} value={item[1]} className='mr-3' />
+      ))}
+    </RadioButtonList>
+  </>
 )
 
 export const Default = Template.bind({})

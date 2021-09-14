@@ -1,6 +1,7 @@
 import React from "react"
 
-import { TextField } from "src/components/common/inputs"
+import { AppGlobalStyles } from "src/styles"
+import { TextField } from "src/components"
 
 import PreloaderSVG from "src/static/images/svg/preloader.svg"
 
@@ -9,7 +10,12 @@ export default {
   component: TextField
 }
 
-const Template = args => <TextField {...args} />
+const Template = args => (
+  <>
+    <AppGlobalStyles />
+    <TextField {...args} />
+  </>
+)
 
 export const Default = Template.bind({})
 Default.args = {

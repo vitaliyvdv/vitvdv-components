@@ -1,6 +1,7 @@
 import React from "react"
 
-import AppTooltip from "src/components/common/tooltip"
+import { AppGlobalStyles } from "src/styles"
+import { AppTooltip } from "src/components"
 
 export default {
   title: "Common/Tooltip",
@@ -8,9 +9,12 @@ export default {
 }
 
 const Template = args => (
-  <div className='flex'>
-    <AppTooltip {...args} />
-  </div>
+  <>
+    <AppGlobalStyles />
+    <div className='flex'>
+      <AppTooltip {...args} />
+    </div>
+  </>
 )
 
 export const Default = Template.bind({})

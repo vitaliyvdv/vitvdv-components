@@ -1,13 +1,19 @@
 import React from "react"
 
-import { TextArea } from "src/components/common/inputs"
+import { AppGlobalStyles } from "src/styles"
+import { TextArea } from "src/components"
 
 export default {
   title: "Inputs/TextArea",
   component: TextArea
 }
 
-const Template = args => <TextArea {...args} />
+const Template = args => (
+  <>
+    <AppGlobalStyles />
+    <TextArea {...args} />
+  </>
+)
 
 export const Default = Template.bind({})
 Default.args = {
