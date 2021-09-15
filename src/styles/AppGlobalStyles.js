@@ -11,16 +11,19 @@ import RoobertSemiBoldWOFF2 from "src/static/fonts/roobert/Roobert-SemiBold.woff
 import RoobertSemiBoldWOFF from "src/static/fonts/roobert/Roobert-SemiBold.woff"
 
 const AppGlobalStyles = createGlobalStyle`
+
+
+
   @font-face {
     font-family: "Roobert";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('${RoobertRegularOTF}');
-    src: url('${RoobertRegularEOT}');
+    src: url("${RoobertRegularOTF}");
+    src: url("${RoobertRegularEOT}");
     src:
-      url('${RoobertRegularWOFF2}') format("woff2"),
-      url('${RoobertRegularWOFF}') format("woff");
+      url("${RoobertRegularWOFF2}") format("woff2"),
+      url("${RoobertRegularWOFF}") format("woff");
   }
 
   @font-face {
@@ -28,11 +31,11 @@ const AppGlobalStyles = createGlobalStyle`
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url('${RoobertSemiBoldOTF}');
-    src: url('${RoobertSemiBoldEOT}');
+    src: url("${RoobertSemiBoldOTF}");
+    src: url("${RoobertSemiBoldEOT}");
     src:
-      url('${RoobertSemiBoldWOFF2}') format("woff2"),
-      url('${RoobertSemiBoldWOFF}') format("woff");
+      url("${RoobertSemiBoldWOFF2}") format("woff2"),
+      url("${RoobertSemiBoldWOFF}") format("woff");
   }
 
   html,
