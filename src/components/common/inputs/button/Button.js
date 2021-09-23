@@ -8,6 +8,7 @@ const Preloader = loadable(() => import("src/components/common/preloader"))
 import Icon from "src/components/common/icon"
 
 const StyledButtonContained = ({ color }) => css`
+  ${tw`border-solid`}
   ${color === "primary" && tw`bg-primary border-primary text-white`};
   ${color === "secondary" && tw`bg-secondary border-secondary text-white`};
 
@@ -31,7 +32,7 @@ const StyledButtonContained = ({ color }) => css`
 
 const StyledButtonOutlined = ({ color }) =>
   css`
-    ${tw`bg-transparent`};
+    ${tw`bg-transparent border-solid`};
     ${color === "primary" && tw`border-primary text-primary`};
     ${color === "secondary" && tw`border-secondary text-secondary`};
 
@@ -54,6 +55,7 @@ const StyledButtonOutlined = ({ color }) =>
   `
 
 const StyledButtonText = ({ color }) => css`
+  ${tw`border-none`}
   ${color == "primary" && tw`bg-transparent text-primary`};
   ${color == "secondary" && tw`bg-transparent text-secondary`};
 
@@ -121,9 +123,11 @@ const StyledButtonValue = styled.div(({ size, preloader }) => [
 
 const StyledButtonPreloader = styled(Preloader)(({}) => [tw`absolute top-0 left-0 w-full h-full`])
 
-const StyledStartIcon = styled(Icon)(({ preloader }) => [tw`mr-2`, preloader && tw`invisible`])
+const StyledIcon = styled(Icon)(({ preloader }) => [preloader && tw`invisible`])
 
-const StyledEndIcon = styled(Icon)(({ preloader }) => [tw`ml-2`, preloader && tw`invisible`])
+const StyledStartIcon = styled(StyledIcon)(() => [tw`mr-2`])
+
+const StyledEndIcon = styled(StyledIcon)(() => [tw`ml-2`])
 
 const Button = forwardRef(
   ({ children, preloader, startIcon, endIcon, size, color, variant, disabled, onlyIcon, ...rest }, ref) => {
