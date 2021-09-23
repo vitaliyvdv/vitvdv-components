@@ -1,4 +1,7 @@
+import React from "react"
+
 import { createGlobalStyle } from "styled-components"
+import { GlobalStyles } from "twin.macro"
 
 import RoobertRegularOTF from "src/static/fonts/roobert/Roobert-Regular.otf"
 import RoobertRegularEOT from "src/static/fonts/roobert/Roobert-Regular.eot"
@@ -10,10 +13,7 @@ import RoobertSemiBoldEOT from "src/static/fonts/roobert/Roobert-SemiBold.eot"
 import RoobertSemiBoldWOFF2 from "src/static/fonts/roobert/Roobert-SemiBold.woff2"
 import RoobertSemiBoldWOFF from "src/static/fonts/roobert/Roobert-SemiBold.woff"
 
-const AppGlobalStyles = createGlobalStyle`
-
-
-
+const AppStyles = createGlobalStyle`
   @font-face {
     font-family: "Roobert";
     font-style: normal;
@@ -54,5 +54,14 @@ const AppGlobalStyles = createGlobalStyle`
     line-height: 1.5;
   }
 `
+
+const AppGlobalStyles = () => {
+  return (
+    <>
+      <GlobalStyles />
+      <AppStyles />
+    </>
+  )
+}
 
 export default AppGlobalStyles
