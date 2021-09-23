@@ -1,6 +1,5 @@
 import React, { forwardRef } from "react"
 import PropTypes from "prop-types"
-import SVG from "react-inlinesvg"
 
 import Button from "./Button"
 
