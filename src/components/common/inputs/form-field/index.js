@@ -17,7 +17,7 @@ const FormField = ({ label, error, disabled, autoFocus, tooltip, children, ...re
   const inputEl = useRef(null)
 
   const inputFocus = () => {
-    if (inputEl.current && !focused) {
+    if (inputEl.current && !disabled && !focused) {
       inputEl.current.focus()
       setFocused(true)
     } else {
@@ -27,6 +27,7 @@ const FormField = ({ label, error, disabled, autoFocus, tooltip, children, ...re
 
   useEffect(() => {
     autoFocus && inputFocus()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -38,7 +39,7 @@ const FormField = ({ label, error, disabled, autoFocus, tooltip, children, ...re
         focused: focused
       }}
     >
-      <div autoFocus={autoFocus}>
+      <div>
         {label && (
           <FormFieldContext.Consumer>
             {({ labelClick }) => (

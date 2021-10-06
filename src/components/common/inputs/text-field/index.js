@@ -9,8 +9,7 @@ import { FormFieldContext } from "src/components/common/inputs/form-field/form-f
 
 const StyledInputText = styled.input(({ error }) => [
   tw`flex items-center h-full w-full px-0`,
-  !error && tw`text-black`,
-  error && tw`text-danger`
+  !error ? tw`text-black` : tw`text-danger`
 ])
 
 const TextField = ({
@@ -55,15 +54,11 @@ const TextField = ({
               aria-label={label ? label : textPrepend}
               onFocus={() => {
                 inputFocus()
-                if (onFocus) {
-                  onFocus()
-                }
+                onFocus && onFocus()
               }}
               onBlur={() => {
                 inputFocus()
-                if (onBlur) {
-                  onBlur()
-                }
+                onBlur && onBlur()
               }}
             />
           )}

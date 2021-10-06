@@ -12,8 +12,7 @@ const StyledTextArea = styled.textarea(({ error }) => [
   `min-height: 124px;
   max-height: 260px`,
 
-  !error && tw`text-black`,
-  error && tw`text-danger`
+  !error ? tw`text-black` : tw`text-danger`
 ])
 
 const TextArea = ({ className, label, error, disabled, onFocus, onBlur, autoFocus, tooltip, ...rest }) => {
@@ -36,15 +35,11 @@ const TextArea = ({ className, label, error, disabled, onFocus, onBlur, autoFocu
               disabled={disabled}
               onFocus={() => {
                 inputFocus()
-                if (onFocus) {
-                  onFocus()
-                }
+                onFocus && onFocus()
               }}
               onBlur={() => {
                 inputFocus()
-                if (onBlur) {
-                  onBlur()
-                }
+                onBlur && onBlur()
               }}
               {...rest}
             />

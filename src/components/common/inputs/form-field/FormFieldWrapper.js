@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import tw, { styled, css } from "twin.macro"
 
@@ -8,13 +8,11 @@ import Text from "src/components/common/text"
 import { FormFieldContext } from "./form-field-context"
 
 const StyledWrapper = styled.div(({ focused, error, size, disabled, textarea }) => [
-  tw`flex items-center rounded border overflow-hidden`,
+  tw`flex items-center rounded border border-solid border-opacity-100 overflow-hidden`,
 
-  !focused && !error && tw`border-gray`,
-  focused && !error && tw`border-primary`,
+  !error ? (focused ? tw`border-primary` : tw`border-gray`) : tw`border-danger`,
 
-  disabled && tw`opacity-50 bg-gray`,
-  error && tw`border-danger`,
+  disabled && tw`opacity-50 border-gray bg-gray`,
 
   size === "sm" && !textarea && tw`h-sm px-3`,
   size === "base" && !textarea && tw`h-md px-4`,
@@ -45,7 +43,7 @@ const StyledFieldChild = css`
     input,
     select,
     textarea {
-      ${tw`appearance-none leading-normal outline-none placeholder-black placeholder-opacity-35 truncate bg-transparent border-0`};
+      ${tw`appearance-none leading-normal outline-none placeholder-black placeholder-opacity-35 truncate bg-transparent border-none border-0`};
       transition: color 0.3s ease 0s;
 
       &:focus,
@@ -91,7 +89,7 @@ const FormFieldWrapper = ({
           {...rest}
         >
           {!textarea ? (
-            <Fragment>
+            <>
               {startIcon && <StyledStartIcon size={size} error={error} onClick={inputFocus} icon={startIcon} />}
 
               {textPrepend && (
@@ -115,9 +113,9 @@ const FormFieldWrapper = ({
               )}
 
               {endIcon && <StyledEndIcon size={size} error={error} onClick={inputFocus} icon={endIcon} />}
-            </Fragment>
+            </>
           ) : (
-            <Fragment>{inputField}</Fragment>
+            <>{inputField}</>
           )}
         </StyledWrapper>
       )}
