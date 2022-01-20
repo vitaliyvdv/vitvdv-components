@@ -14,6 +14,9 @@
 		"yarn": true,
 		"contents": "dist"
 	},
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+ },
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "framer-motion": "^4.1.17",
