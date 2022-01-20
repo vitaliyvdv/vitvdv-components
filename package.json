@@ -16,7 +16,7 @@
     "tailwind.config.js"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry":"https://npm.pkg.github.com/vitvdv-components"
   },
   "dependencies": {
     "@loadable/component": "^5.15.0",
