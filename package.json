@@ -7,8 +7,8 @@
     "type": "git",
     "url": "https://github.com/vitaliyvdv/vitvdv-components.git"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "index.js",
+  "module": "index.js",
   "files": ["dist", "README.md", "jsconfig.json", "tailwind.config.js"],
   "np": {
 		"yarn": true,
