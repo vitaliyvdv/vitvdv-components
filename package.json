@@ -7,6 +7,7 @@
     "type": "git",
     "url": "https://github.com/vitaliyvdv/vitvdv-components.git"
   },
+  "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": ["dist", "README.md", "jsconfig.json", "tailwind.config.js"],
