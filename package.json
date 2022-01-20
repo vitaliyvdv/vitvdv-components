@@ -11,7 +11,7 @@
   "module": "dist/index.js",
   "files": ["dist", "README.md", "jsconfig.json", "tailwind.config.js"],
   "np": {
-		"yarn": true,
+		"yarn": false,
 		"contents": "dist"
 	},
   "dependencies": {
