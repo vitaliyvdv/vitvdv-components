@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext, useEffect } from "react"
 import PropTypes from "prop-types"
 import tw, { styled, css } from "twin.macro"
 
@@ -8,9 +8,9 @@ import Text from "src/components/common/text"
 import { FormFieldContext } from "./form-field-context"
 
 const StyledWrapper = styled.div(({ focused, error, size, disabled, textarea }) => [
-  tw`flex items-center rounded border border-solid border-opacity-100 overflow-hidden`,
+  tw`flex items-center rounded border border-solid border-gray border-opacity-100 overflow-hidden`,
 
-  !error ? (focused ? tw`border-primary` : tw`border-gray`) : tw`border-danger`,
+  // !error ? (focused ? tw`border-primary` : tw`border-gray`) : tw`border-danger`,
 
   disabled && tw`opacity-50 border-gray bg-gray`,
 
@@ -21,6 +21,10 @@ const StyledWrapper = styled.div(({ focused, error, size, disabled, textarea }) 
 
   `transition: border-color 0.3s ease 0s`
 ])
+
+const StyledWrapperOnFocus = styled(StyledWrapper)(({}) => [tw`border-primary`])
+
+const StyledWrapperError = styled(StyledWrapper)(({}) => [tw`border-danger`])
 
 const StyledTextPrepend = styled(Text)(({ error }) => [
   tw`whitespace-nowrap flex-shrink-0 mr-2`,
@@ -76,10 +80,18 @@ const FormFieldWrapper = ({
 }) => {
   const inputField = <StyledField>{children}</StyledField>
 
+  const context = useContext(FormFieldContext)
+
+  useEffect(() => {
+    console.log(context)
+  }, [context])
+
+  const Wrapper = !error ? (context.focused ? StyledWrapperOnFocus : StyledWrapper) : StyledWrapperError
+
   return (
     <FormFieldContext.Consumer>
       {({ inputFocus, focused }) => (
-        <StyledWrapper
+        <Wrapper
           size={size}
           focused={focused}
           error={error}
@@ -117,7 +129,7 @@ const FormFieldWrapper = ({
           ) : (
             <>{inputField}</>
           )}
-        </StyledWrapper>
+        </Wrapper>
       )}
     </FormFieldContext.Consumer>
   )
