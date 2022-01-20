@@ -15,9 +15,6 @@
     "jsconfig.json",
     "tailwind.config.js"
   ],
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
   "np": {
 		"yarn": false,
 		"contents": "dist"
