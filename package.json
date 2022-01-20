@@ -15,6 +15,13 @@
     "jsconfig.json",
     "tailwind.config.js"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "np": {
+		"yarn": false,
+		"contents": "dist"
+	},
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "framer-motion": "^4.1.17",
