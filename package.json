@@ -7,10 +7,13 @@
     "type": "git",
     "url": "https://github.com/vitaliyvdv/vitvdv-components.git"
   },
-  "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": ["dist", "README.md", "jsconfig.json", "tailwind.config.js"],
+  "np": {
+		"yarn": false,
+		"contents": "dist"
+	},
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "framer-motion": "^4.1.17",
@@ -33,7 +36,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.2",
-    "np": "^7.5.0",
+    "np": "^7.6.0",
     "onchange": "^7.1.0",
     "path": "^0.12.7",
     "postcss": "^8.3.9",
