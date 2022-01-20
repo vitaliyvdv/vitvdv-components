@@ -78,7 +78,7 @@
     "build-storybook": "build-storybook",
     "storybook-static": "npx http-server ./storybook-static",
     "np-run": "np --no-tests --no-2fa",
-    "npm-publish": "yarn build && yarn np-run"
+    "npm-publish": "npm run build && npm run np-run"
   },
   "husky": {
     "hooks": {
