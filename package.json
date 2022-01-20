@@ -15,9 +15,6 @@
     "jsconfig.json",
     "tailwind.config.js"
   ],
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/vitvdv-components"
-  },
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "framer-motion": "^4.1.17",
