@@ -1,6 +1,6 @@
 {
   "name": "vitvdv-components",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "author": "",
   "license": "ISC",
   "repository": {
@@ -16,8 +16,8 @@
     "tailwind.config.js"
   ],
   "np": {
-		"yarn": false
-	},
+    "yarn": false
+  },
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "framer-motion": "^4.1.17",
