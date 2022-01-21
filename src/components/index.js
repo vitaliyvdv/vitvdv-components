@@ -23,6 +23,7 @@ export { default as Label } from "./common/inputs/label"
 export { default as Error } from "./common/inputs/error"
 export { default as TextArea } from "./common/inputs/textarea"
 export { default as Upload } from "./common/inputs/upload"
+export { default as Fieldset } from "./common/inputs/fieldset"
 export { default as FormField } from "./common/inputs/form-field"
 
 // export { default as LazyImage } from "./common/lazyload/LazyImage"
