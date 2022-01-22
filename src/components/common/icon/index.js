@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import SVG from "react-inlinesvg"
+import SVG, { Props as SVGProps } from "react-inlinesvg"
 import tw, { styled } from "twin.macro"
 
 const StyledIcon = styled.div(({ size }) => [
@@ -12,13 +12,13 @@ const StyledIcon = styled.div(({ size }) => [
   size == "xl" && tw`icon-xl`
 ])
 
-const Icon = ({ size, icon, ...rest }) => {
+const Icon = forwardRef(({ size, icon, ...rest }, ref) => {
   return (
-    <StyledIcon size={size} {...rest}>
-      <SVG src={icon} />
+    <StyledIcon size={size}>
+      <SVG id={icon} ref={ref} src={icon} {...rest} />
     </StyledIcon>
   )
-}
+})
 
 Icon.propTypes = {
   size: PropTypes.oneOf(["xs", "sm", "base", "lg", "xl"])
