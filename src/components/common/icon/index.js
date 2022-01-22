@@ -1,4 +1,4 @@
-import React from "react"
+import React, {forwardRef} from "react"
 import PropTypes from "prop-types"
 import SVG, { Props as SVGProps } from "react-inlinesvg"
 import tw, { styled } from "twin.macro"
