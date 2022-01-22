@@ -16,6 +16,13 @@
   ],
   "presets": [
     [
+      "@babel/preset-env",
+      {
+        "loose": true,
+        "modules": false
+      }
+    ],
+    [
       "react-app",
       { "absoluteRuntime": false }
     ]

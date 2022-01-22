@@ -7,15 +7,9 @@
     "type": "git",
     "url": "https://github.com/vitaliyvdv/vitvdv-components.git"
   },
-  "type": "commonjs",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": [
-    "dist",
-    "README.md",
-    "jsconfig.json",
-    "tailwind.config.js"
-  ],
+  "files": ["dist", "README.md", "jsconfig.json", "tailwind.config.js"],
   "np": {
     "yarn": false
   },
@@ -30,6 +24,7 @@
   "devDependencies": {
     "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.16.11",
     "@storybook/addon-actions": "^6.4.14",
     "@storybook/addon-essentials": "^6.4.14",
     "@storybook/addon-links": "^6.4.14",
@@ -91,16 +86,8 @@
     }
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   },
   "babelMacros": {
     "twin": {
