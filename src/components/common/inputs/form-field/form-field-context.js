@@ -4,5 +4,5 @@ export const FormFieldContext = React.createContext({
   labelClick: () => {},
   inputFocus: () => {},
   element: null,
-  focused: null
+  focused: false
 })

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext, useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 
 import tw, { styled } from "twin.macro"
@@ -27,6 +27,7 @@ const TextField = ({
   autoFocus,
   action,
   tooltip,
+  value,
   ...rest
 }) => {
   return (
@@ -51,6 +52,7 @@ const TextField = ({
               autoComplete='off'
               disabled={disabled}
               error={error}
+              value={value}
               aria-label={label ? label : textPrepend}
               onFocus={() => {
                 inputFocus()

@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react"
+import React, { useState, useEffect, useContext, useRef } from "react"
 import PropTypes from "prop-types"
 
 import tw, { styled } from "twin.macro"
@@ -13,10 +13,12 @@ const StyledLabel = styled(Label)(({}) => [tw`mb-2`])
 const StyledError = styled(Error)(({}) => [tw`mt-1`])
 
 const FormField = ({ label, error, disabled, autoFocus, tooltip, children, ...rest }) => {
-  const [focused, setFocused] = useState(false)
+  const context = useContext(FormFieldContext)
+
+  const [focused, setFocused] = useState(context.focused)
   const inputEl = useRef(null)
 
-  const inputFocus = () => {
+  const setInputFocus = () => {
     if (inputEl.current && !disabled && !focused) {
       inputEl.current.focus()
       setFocused(true)
@@ -26,27 +28,16 @@ const FormField = ({ label, error, disabled, autoFocus, tooltip, children, ...re
   }
 
   useEffect(() => {
-    autoFocus && inputFocus()
+    autoFocus && setInputFocus()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const contextValue = { focused, setFocused, inputFocus: setInputFocus, element: inputEl }
+
   return (
-    <FormFieldContext.Provider
-      value={{
-        labelClick: inputFocus,
-        inputFocus: inputFocus,
-        element: inputEl,
-        focused: focused
-      }}
-    >
+    <FormFieldContext.Provider value={contextValue}>
       <div>
-        {label && (
-          <FormFieldContext.Consumer>
-            {({ labelClick }) => (
-              <StyledLabel onClick={labelClick} disabled={disabled} label={label} tooltip={tooltip} />
-            )}
-          </FormFieldContext.Consumer>
-        )}
+        {label && <StyledLabel onClick={setInputFocus} disabled={disabled} label={label} tooltip={tooltip} />}
         {children}
         {error && <StyledError>{error}</StyledError>}
       </div>
