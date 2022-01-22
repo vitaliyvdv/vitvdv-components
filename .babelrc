@@ -18,8 +18,9 @@
     [
       "@babel/preset-env",
       {
-        "loose": true,
-        "modules": false
+        "targets": {
+          "esmodules": true
+        }
       }
     ],
     [
