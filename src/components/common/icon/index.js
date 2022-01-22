@@ -15,7 +15,7 @@ const StyledIcon = styled.div(({ size }) => [
 const Icon = forwardRef(({ size, icon, ...rest }, ref) => {
   return (
     <StyledIcon size={size}>
-      <SVG id={icon} ref={ref} src={icon} {...rest} />
+      {icon && <SVG uniquifyIDs={true} ref={ref} src={icon} {...rest} />}
     </StyledIcon>
   )
 })
