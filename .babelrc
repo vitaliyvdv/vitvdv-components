@@ -16,14 +16,7 @@
   ],
   "presets": [
     [
-      "@babel/preset-env",
-      {
-        "modules": "commonjs"
-      }
-    ],
-    [
-      "react-app",
-      { "absoluteRuntime": false }
+      "@babel/preset-env"
     ]
   ],
   "env": {
