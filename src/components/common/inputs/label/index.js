@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import tw, { styled } from "twin.macro"
 
 import Text from "src/components/common/text"
-import Icon from "src/components/common/icon"
+import IconSVG from "src/components/common/icon"
 import AppTooltip from "src/components/common/tooltip"
 
 import TooltipInfoIcon from "src/static/images/svg/tooltip/info.svg"

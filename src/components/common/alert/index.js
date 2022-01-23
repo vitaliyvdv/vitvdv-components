@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Text from "src/components/common/text"
-import Icon from "src/components/common/icon"
+import IconSVG from "src/components/common/icon"
 
 import tw, { styled, css } from "twin.macro"
 

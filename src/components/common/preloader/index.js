@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import tw, { styled } from "twin.macro"
 
-import Icon from "src/components/common/icon"
+import IconSVG from "src/components/common/icon"
 
 import PreloaderSVG from "src/static/images/svg/preloader.svg"
 

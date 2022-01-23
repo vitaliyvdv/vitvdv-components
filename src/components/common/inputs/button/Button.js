@@ -5,7 +5,7 @@ import loadable from "@loadable/component"
 import tw, { styled, css } from "twin.macro"
 
 const Preloader = loadable(() => import("src/components/common/preloader"))
-import Icon from "src/components/common/icon"
+import IconSVG from "src/components/common/icon"
 
 const StyledButtonContained = ({ color }) => css`
   ${tw`border-solid`}
