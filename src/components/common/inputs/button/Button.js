@@ -145,8 +145,8 @@ const Button = forwardRef(
 
     const icon = (
       <>
-        {startIcon && <Icon size={size} icon={startIcon} />}
-        {endIcon && <Icon size={size} icon={endIcon} />}
+        {startIcon && <IconSVG size={size} icon={startIcon} />}
+        {endIcon && <IconSVG size={size} icon={endIcon} />}
       </>
     )
 

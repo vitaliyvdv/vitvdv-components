@@ -11,7 +11,7 @@ const StyledPreloader = styled.div(({}) => [tw`flex justify-center items-center`
 const Preloader = ({ size, ...rest }) => {
   return (
     <StyledPreloader {...rest}>
-      <Icon size={size} icon={PreloaderSVG}></Icon>
+      <IconSVG size={size} icon={PreloaderSVG}></IconSVG>
     </StyledPreloader>
   )
 }
