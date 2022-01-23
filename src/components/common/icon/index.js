@@ -16,9 +16,9 @@ const StyledIcon = styled.div(({ size }) => [
 const IconSVG = ({ size, icon, ...rest }) => {
   const srcIcon = icon === "object" && icon !== null ? ({ src } = icon) : icon
 
-  console.log(icon)
+  console.log(srcIcon)
 
-  return <StyledIcon size={size}>{icon && <SVG src={icon} {...rest} />}</StyledIcon>
+  return <StyledIcon size={size}>{icon && <SVG src={srcIcon} {...rest} />}</StyledIcon>
 }
 
 IconSVG.propTypes = {
