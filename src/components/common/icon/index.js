@@ -1,4 +1,4 @@
-import React, {forwardRef} from "react"
+import React, { forwardRef } from "react"
 import PropTypes from "prop-types"
 import SVG, { Props as SVGProps } from "react-inlinesvg"
 import tw, { styled } from "twin.macro"
@@ -13,11 +13,7 @@ const StyledIcon = styled.div(({ size }) => [
 ])
 
 const Icon = forwardRef(({ size, icon, ...rest }, ref) => {
-  return (
-    <StyledIcon size={size}>
-      {icon && <SVG uniquifyIDs={true} ref={ref} src={icon} {...rest} />}
-    </StyledIcon>
-  )
+  return <StyledIcon size={size}>{icon && <SVG ref={ref} src={icon} {...rest} />}</StyledIcon>
 })
 
 Icon.propTypes = {

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import tw, { styled } from "twin.macro"
 
-import { FormField } from ".."
+import FormField from "src/components/common/inputs/form-field"
 import FormFieldWrapper from "src/components/common/inputs/form-field/FormFieldWrapper"
 import { FormFieldContext } from "src/components/common/inputs/form-field/form-field-context"
 

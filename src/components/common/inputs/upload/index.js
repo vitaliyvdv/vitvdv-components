@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import tw, { styled } from "twin.macro"
 
-import { Button } from ".."
+import Button from "src/components/common/inputs/button/Button"
 
 const StyledUpload = styled.div(() => [tw`relative`])
 

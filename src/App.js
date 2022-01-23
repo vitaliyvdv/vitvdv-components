@@ -1,4 +1,4 @@
-import { Container, Preloader, Text, Button, AppTooltip, TextArea } from "src/components"
+import { Container, Preloader, Text, Button, AppTooltip, TextArea, TextField } from "src/components"
 import { AppGlobalStyles } from "src/styles"
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
     <Container>
       <AppGlobalStyles />
       <Preloader size='xl' />
+      <TextField label='test' />
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, erat a consequat posuere, lectus velit
         facilisis mauris, eget auctor purus leo quis metus. Quisque sit amet tempor velit, vitae auctor est. Donec in

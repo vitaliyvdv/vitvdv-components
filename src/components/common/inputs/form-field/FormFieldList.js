@@ -1,7 +1,7 @@
 import React from "react"
 import tw, { styled, css } from "twin.macro"
 
-import { FormField } from ".."
+import FormField from "src/components/common/inputs/form-field"
 
 const ListStyles = css`
   & {
