@@ -17,7 +17,7 @@ const StyledLabelText = styled.span(({ tooltip, disabled }) => [
 
 const StyledLabelTooltip = styled(AppTooltip)(() => [tw`align-middle text-0 leading-0`])
 
-const StyledLabeTooltiplIcon = styled(Icon)(({ tooltip, disabled }) => [tw`text-black text-opacity-65`])
+const StyledLabeTooltiplIcon = styled(IconSVG)(({ tooltip, disabled }) => [tw`text-black text-opacity-65`])
 
 const Label = ({ label, disabled, htmlFor, onClick, tooltip, children, size, ...rest }) => {
   return (

@@ -123,7 +123,7 @@ const StyledButtonValue = styled.div(({ size, preloader }) => [
 
 const StyledButtonPreloader = styled(Preloader)(({}) => [tw`absolute top-0 left-0 w-full h-full`])
 
-const StyledIcon = styled(Icon)(({ preloader }) => [preloader && tw`invisible`])
+const StyledIcon = styled(IconSVG)(({ preloader }) => [preloader && tw`invisible`])
 
 const StyledStartIcon = styled(StyledIcon)(() => [tw`mr-2`])
 

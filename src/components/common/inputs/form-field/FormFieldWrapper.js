@@ -36,7 +36,7 @@ const StyledTextAppend = styled(Text)(({ error }) => [
   error && tw`text-danger`
 ])
 
-const StyledIcon = styled(Icon)(({ error }) => [error && tw`text-danger`])
+const StyledIcon = styled(IconSVG)(({ error }) => [error && tw`text-danger`])
 
 const StyledStartIcon = styled(StyledIcon)(() => [tw`mr-2`])
 

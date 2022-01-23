@@ -13,16 +13,16 @@ const StyledIcon = styled.div(({ size }) => [
   size == "xl" && tw`icon-xl`
 ])
 
-const Icon = ({ size, icon, ...rest }) => {
+const IconSVG = ({ size, icon, ...rest }) => {
   return <StyledIcon size={size}>{icon && <ReactSVG src={icon} wrapper='div' {...rest} />}</StyledIcon>
 }
 
-Icon.propTypes = {
+IconSVG.propTypes = {
   size: PropTypes.oneOf(["xs", "sm", "base", "lg", "xl"])
 }
 
-Icon.defaultProps = {
+IconSVG.defaultProps = {
   size: "base"
 }
 
-export default Icon
+export default IconSVG

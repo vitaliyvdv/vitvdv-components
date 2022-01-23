@@ -50,7 +50,7 @@ const StyledAlert = styled.div(({ variant }) => [
 
 const StyledAlertWrapper = styled.div(({}) => [tw`flex items-start text-0 leading-0`])
 
-const StyledAlertIcon = styled(Icon)(({ variant }) => [
+const StyledAlertIcon = styled(IconSVG)(({ variant }) => [
   tw`flex-shrink-0 mr-3`,
   variant == "outlined" && StyledAlertIconColor
 ])
