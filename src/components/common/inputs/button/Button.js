@@ -1,7 +1,6 @@
 import React, { Fragment, forwardRef } from "react"
 import PropTypes from "prop-types"
 import loadable from "@loadable/component"
-
 import tw, { styled, css } from "twin.macro"
 
 const Preloader = loadable(() => import("src/components/common/preloader"))
