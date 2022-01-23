@@ -1,6 +1,6 @@
 {
   "name": "vitvdv-components",
-  "version": "0.1.31",
+  "version": "0.1.32",
   "author": "",
   "license": "ISC",
   "repository": {
@@ -9,7 +9,12 @@
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": ["dist", "README.md", "jsconfig.json", "tailwind.config.js"],
+  "files": [
+    "dist",
+    "README.md",
+    "jsconfig.json",
+    "tailwind.config.js"
+  ],
   "np": {
     "yarn": false
   },
@@ -87,8 +92,16 @@
     }
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "babelMacros": {
     "twin": {
