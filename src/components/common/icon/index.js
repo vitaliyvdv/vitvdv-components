@@ -14,7 +14,16 @@ const StyledIcon = styled.div(({ size }) => [
 ])
 
 const IconSVG = ({ size, icon, ...rest }) => {
-  const srcIcon = typeof icon === "object" && icon !== null ? ({ src } = icon) : icon
+  // const srcIcon = typeof icon === "object" && icon !== null ? ({ src } = icon) : icon
+
+  let srcIcon
+
+  if (typeof icon === "object" && icon !== null) {
+    const { src } = icon
+    srcIcon = src
+  } else {
+    srcIcon = icon
+  }
 
   console.log(srcIcon)
 
