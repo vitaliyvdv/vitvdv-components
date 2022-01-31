@@ -33,3 +33,5 @@ export { default as Preloader } from "./common/preloader"
 export { default as Snackbar } from "./common/snackbar"
 export { default as Text } from "./common/text"
 export { default as AppTooltip } from "./common/tooltip"
+
+export { default as FieldValidation } from "./validation/FieldValidation"

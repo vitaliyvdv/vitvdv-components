@@ -1,6 +1,16 @@
-import { createElement } from "react"
-import { Container, Preloader, Text, Button, AppTooltip, TextArea, TextField, Fieldset } from "src/components"
-import { Form, Formik, Field } from "formik"
+import React from "react"
+import {
+  Container,
+  Preloader,
+  Text,
+  Button,
+  AppTooltip,
+  TextArea,
+  TextField,
+  Fieldset,
+  FieldValidation
+} from "src/components"
+import { Form, Formik } from "formik"
 import * as Yup from "yup"
 
 import { AppGlobalStyles } from "src/styles"
@@ -10,32 +20,6 @@ const SignupSchema = Yup.object().shape({
   password: Yup.string().min(2, "Too Short!").max(12, "Too Long!").required("Required"),
   email: Yup.string().email("Invalid email").required("Required")
 })
-
-const FieldValidation = ({ name, component, children, onBlur, onChange, ...rest }) => {
-  return (
-    <Field name={name}>
-      {({ field, form, meta }) =>
-        createElement(
-          component,
-          {
-            ...field,
-            ...rest,
-            error: meta.touched && meta.error ? meta.error : null,
-            onBlur: () => {
-              field.onBlur
-              onBlur && onBlur()
-            },
-            onChange: e => {
-              form.setFieldValue(field.name, e.target.value)
-              onChange && onChange()
-            }
-          },
-          null
-        )
-      }
-    </Field>
-  )
-}
 
 function App() {
   return (
