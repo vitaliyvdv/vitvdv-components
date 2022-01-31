@@ -36,12 +36,10 @@ const TextArea = ({ className, label, error, disabled, onFocus, onBlur, autoFocu
               onFocus={() => {
                 inputFocus()
                 onFocus && onFocus()
-                console.log("onfocus")
               }}
               onBlur={() => {
-                // inputFocus()
+                inputFocus()
                 onBlur && onBlur()
-                console.log("onblur")
               }}
               {...rest}
             />

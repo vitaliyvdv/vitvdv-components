@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect, useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 
 import tw, { styled } from "twin.macro"
@@ -28,6 +28,7 @@ const TextField = ({
   action,
   tooltip,
   value,
+
   ...rest
 }) => {
   return (

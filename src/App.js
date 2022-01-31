@@ -1,12 +1,47 @@
-import { Container, Preloader, Text, Button, AppTooltip, TextArea, TextField } from "src/components"
+import { createElement } from "react"
+import { Container, Preloader, Text, Button, AppTooltip, TextArea, TextField, Fieldset } from "src/components"
+import { Form, Formik, Field } from "formik"
+import * as Yup from "yup"
+
 import { AppGlobalStyles } from "src/styles"
+
+const SignupSchema = Yup.object().shape({
+  login: Yup.string().min(2, "Too Short!").max(12, "Too Long!").required("Required"),
+  password: Yup.string().min(2, "Too Short!").max(12, "Too Long!").required("Required"),
+  email: Yup.string().email("Invalid email").required("Required")
+})
+
+const FieldValidation = ({ name, component, children, onBlur, onChange, ...rest }) => {
+  return (
+    <Field name={name}>
+      {({ field, form, meta }) =>
+        createElement(
+          component,
+          {
+            ...field,
+            ...rest,
+            error: meta.touched && meta.error ? meta.error : null,
+            onBlur: () => {
+              field.onBlur
+              onBlur && onBlur()
+            },
+            onChange: e => {
+              form.setFieldValue(field.name, e.target.value)
+              onChange && onChange()
+            }
+          },
+          null
+        )
+      }
+    </Field>
+  )
+}
 
 function App() {
   return (
     <Container>
       <AppGlobalStyles />
       <Preloader size='xl' />
-      <TextField label='test' />
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, erat a consequat posuere, lectus velit
         facilisis mauris, eget auctor purus leo quis metus. Quisque sit amet tempor velit, vitae auctor est. Donec in
@@ -16,10 +51,40 @@ function App() {
         tristique senectus et netus et malesuada fames ac turpis egestas. Nam facilisis lorem nec urna venenatis
         vehicula. Nunc nec enim nisi. Curabitur vehicula purus libero, eu commodo ante euismod sit amet.
       </Text>
-      <TextArea label='Textarea label' />
-      <AppTooltip content='lorem ipsum'>
-        <Button>Test Button</Button>
-      </AppTooltip>
+      <Formik
+        initialValues={{ login: "", password: "", email: "" }}
+        validationSchema={SignupSchema}
+        validateOnBlur={true}
+        validateOnChange={true}
+        validateOnMount={true}
+        onSubmit={(values, actions) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2))
+          }, 1000)
+        }}
+      >
+        {({ props, isSubmitting }) => (
+          <Form noValidate>
+            <Fieldset>
+              <FieldValidation name='login' label='Login' component={TextField} />
+
+              <FieldValidation name='email' label='Email' type='email' component={TextField} />
+
+              <FieldValidation name='password' label='Password' type='password' component={TextField} />
+
+              <TextArea label='Textarea label' />
+
+              <div>
+                <AppTooltip content='lorem ipsum'>
+                  <Button type='submit' disabled={isSubmitting}>
+                    Send
+                  </Button>
+                </AppTooltip>
+              </div>
+            </Fieldset>
+          </Form>
+        )}
+      </Formik>
     </Container>
   )
 }
