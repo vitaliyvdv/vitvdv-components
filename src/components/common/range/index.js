@@ -143,7 +143,7 @@ const GlobalStyle = createGlobalStyle`
 
   .noUi-handle {
     &:after {
-      ${tw`block relative bg-white rounded-full border-8 border-solid border-primary cursor-pointer w-7 h-7`}
+      ${tw`block relative bg-white rounded-full border-8 border-solid border-primary cursor-pointer w-6 h-6`}
       content: "";
       transition: transform 0.3s ease 0s;
       z-index: 10;
@@ -153,7 +153,7 @@ const GlobalStyle = createGlobalStyle`
       outline: none;
 
       &:after {
-        transform: scale(1.2);
+        transform: scale(1.25);
       }
     }
   }
