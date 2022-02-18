@@ -8,7 +8,8 @@ import {
   TextArea,
   TextField,
   Fieldset,
-  FieldValidation
+  FieldValidation,
+  Range
 } from "src/components"
 import { Form, Formik } from "formik"
 import * as Yup from "yup"
@@ -20,12 +21,15 @@ const SignupSchema = Yup.object().shape({
   password: Yup.string().min(2, "Too Short!").max(12, "Too Long!").required("Required"),
   email: Yup.string().email("Invalid email").required("Required")
 })
+const sliderRange = { min: "0", max: "1000" }
 
 function App() {
   return (
     <Container>
       <AppGlobalStyles />
+
       <Preloader size='xl' />
+
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, erat a consequat posuere, lectus velit
         facilisis mauris, eget auctor purus leo quis metus. Quisque sit amet tempor velit, vitae auctor est. Donec in
@@ -35,6 +39,9 @@ function App() {
         tristique senectus et netus et malesuada fames ac turpis egestas. Nam facilisis lorem nec urna venenatis
         vehicula. Nunc nec enim nisi. Curabitur vehicula purus libero, eu commodo ante euismod sit amet.
       </Text>
+
+      <Range orientation='horizontal' range={sliderRange} start={50} />
+
       <Formik
         initialValues={{ login: "", password: "", email: "" }}
         validationSchema={SignupSchema}

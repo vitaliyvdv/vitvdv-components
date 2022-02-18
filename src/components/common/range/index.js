@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
   .noUi-base,
   .noUi-connects {
     z-index: 1;
-    ${tw`relative w-full h-full`}
+    ${tw`relative w-full h-full cursor-pointer`}
   }
 
   /* Wrapper for all connect elements.
@@ -60,18 +60,18 @@ const GlobalStyle = createGlobalStyle`
   */
 
   .noUi-vertical .noUi-origin {
-    ${tw`w-full`}
-    height: 10%;
+    ${tw`w-full invisible`}
+    height: 100%;
   }
 
   .noUi-horizontal .noUi-origin {
-    ${tw`h-full`}
-    width: 10%;
+    ${tw`h-full invisible`}
+    width: 100%;
   }
 
   .noUi-handle {
     backface-visibility: hidden;
-    position: absolute;
+    ${tw`absolute visible`}
   }
 
   .noUi-touch-area {
@@ -92,21 +92,19 @@ const GlobalStyle = createGlobalStyle`
   */
 
   .noUi-horizontal {
-    height: 4px;
+    ${tw`h-2`}
 
     .noUi-handle {
-      right: 0;
-      top: 2px;
+      ${tw`top-1/2 right-0`}
       transform: translate(50%, -50%);
     }
   }
 
   .noUi-vertical {
-    width: 4px;
+    ${tw`w-3`}
 
     .noUi-handle {
-      top: 0;
-      right: 2px;
+      ${tw`right-1/2 top-0`}
       transform: translate(50%, -50%);
     }
   }
@@ -145,7 +143,7 @@ const GlobalStyle = createGlobalStyle`
 
   .noUi-handle {
     &:after {
-      ${tw`block relative bg-primary rounded-full cursor-default w-4 h-4`}
+      ${tw`block relative bg-white rounded-full border-8 border-solid border-primary cursor-pointer w-7 h-7`}
       content: "";
       transition: transform 0.3s ease 0s;
       z-index: 10;
@@ -155,7 +153,7 @@ const GlobalStyle = createGlobalStyle`
       outline: none;
 
       &:after {
-        transform: scale(1.4);
+        transform: scale(1.2);
       }
     }
   }
@@ -326,7 +324,7 @@ const GlobalStyleMarkings = createGlobalStyle`
   }
 `
 
-const Range = ({ orientation, animate, start, range, step, tooltips, pips, onChange, ...rest }) => {
+const Range = ({ orientation, animate, start, minRange, maxRange, step, tooltips, pips, onChange, ...rest }) => {
   const sliderRef = useRef(null)
 
   useEffect(() => {
@@ -337,7 +335,10 @@ const Range = ({ orientation, animate, start, range, step, tooltips, pips, onCha
       animate: animate,
       start: start,
       connect: start.length > 1 ? true : "lower",
-      range: range,
+      range: {
+        min: minRange,
+        max: maxRange
+      },
       step: step,
       tooltips: tooltips,
       pips: pips
@@ -372,7 +373,8 @@ Range.propTypes = {
   className: PropTypes.string,
   animate: PropTypes.bool,
   start: PropTypes.array,
-  range: PropTypes.object,
+  minRange: PropTypes.number,
+  maxRange: PropTypes.number,
   step: PropTypes.number,
   tooltips: PropTypes.array
 }
@@ -381,10 +383,8 @@ Range.defaultProps = {
   orientation: "horizontal",
   animate: true,
   start: [0, 100],
-  range: {
-    min: "0",
-    max: "1000"
-  },
+  minRange: 0,
+  maxRange: 100,
   step: 1
 }
 
